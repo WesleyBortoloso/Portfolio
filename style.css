@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+   }
+
+   html{
+    scroll-behavior:smooth;
+  }
+  
+   .container {
+     display: grid;
+     grid-template-columns: 4fr  ;
+     grid-template-rows: 110px 600px 500px 650px 400px 400px 80px;
+     /* grid-gap: 20px; */
+   }
+
+   .logo{
+     max-width: 500px;
+   }
+  
+   .header {
+    background: linear-gradient(135deg, #000000, #000000);
+    padding: 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+
+   .header h1{
+     position: relative;
+      color: rgb(255, 0, 221);
+      max-width: 500px ;
+      font-size: 32px;
+      text-transform: uppercase;
+      transform: scale(1);
+      letter-spacing: 2px;
+      font-weight: 400;
+      font-family: 'Source Code Pro', monospace;
+   }
+  
+
+   .header nav ul {
+     display: flex;
+     flex-wrap: wrap;
+     margin-right: 20px;
+     justify-content: center;
+     gap: 70px;
+     margin-left: 80px;
+   }
+
+   .header .socials ul {
+     flex-wrap: wrap;
+     margin-left: 100px;
+   }
+
+   .header .social a{
+    display: block;
+   }
+
+   .header nav a {
+    display: block;
+    color: rgb(0, 255, 13);
+    font-family: 'Source Code Pro', monospace;
+    transition: .5s;
+  }
+
+  .header nav a:hover {
+    color: white;
+  }
+
+   main {
+     background: #000000;
+     grid-column-start: 1;
+     grid-column-end: 2;
+   }
+
+   main h1{
+     color: white;
+     font-family: 'Source Code Pro', monospace;
+     font-weight: 400;
+     position: relative;
+     width: max-content;
+     font-size: 70px;
+     text-align: center;
+     margin-top: 200px;
+     margin-left: 200px;
+   }
+
+   main h1::before, main h1::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+   }
+
+   main h1::before{
+     background: black;
+     animation: typewriter 5s steps(22) 1s forwards;
+   }
+
+   main h1::after{
+     width: .08em;
+     background: rgb(0, 255, 13);;
+     animation: 
+     typewriter 5s steps(22) 1s forwards,
+     blink 600ms steps(22) infinite;
+   }
+
+   @keyframes typewriter{
+     to { 
+       left: 100%;
+      }
+   }
+
+   @keyframes blink {
+     to {
+       background: transparent;
+     }
+   }
+
+   main h2 {
+     color: white ;
+     font-family: 'Source Code Pro', monospace;
+     font-weight: 300;
+     margin-left: 100px;
+     opacity: 0%;
+     margin-right: 100px;
+     font-size: 60px;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+     text-align: center;
+   }
+  
+   @keyframes mymove {
+    to {opacity: 100%;}
+   }
+
+   .submain {
+     background: #000000;
+     grid-column-start: 2;
+     grid-column-end: 3;
+   }
+  
+  
+   .about-me {
+     background: #000000;
+     grid-column-start:1;
+     grid-column-end: 3;
+     text-align: center;
+     padding-left: 300px;
+     padding-right: 300px;
+   }
+
+   .about-me h1 {
+    color: white ;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 60px;
+    opacity: 0%;
+    padding-top: 100px;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+    margin-bottom: 80px;
+   }
+
+   .about-me p {
+     color: white;
+     font-family: 'Source Code Pro', monospace;
+     font-size: 24px;
+     opacity: 0%;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+   }
+
+   .about-me p a {
+     color: rgb(0, 255, 13) ;
+   }
+
+   .about-me p a:hover {
+     text-decoration: underline;
+   }
+  
+   .my-projects{
+     background: #000000;
+     grid-column-start:1;
+     grid-column-end: 3;
+   }
+
+   .my-projects h1 {
+    color: white ;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 60px;
+    text-align: center;
+    opacity: 0%;
+    padding-top: 100px;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+    margin-bottom: 80px;
+  }
+
+  .grid {
+    display: flex;
+    gap: 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+    opacity: 0%;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+  }
+
+  .grid div{
+    border: 2px rgb(0, 255, 13) solid ;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    height: 250px;
+    opacity: 0%;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+  }
+
+  .grid h2, p {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 20px;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+  }
+
+  .grid h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .grid p{
+    padding-bottom: 10px;
+  }
+
+  .grid span {
+    color: rgb(0, 255, 13);
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+   .contact {
+     background: #000000;
+     grid-column-start:1;
+     grid-column-end: 3;
+   }
+
+   .competences {
+     background: rgb(0, 0, 0);
+     text-align: center;
+   }
+
+   .competences h1 {
+    color: white ;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 60px;
+    opacity: 0%;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+    
+   }
+   .list-competences{
+    margin-top: 150px;
+    margin-left: 250px;
+   }
+
+   .list-competences ul {
+     display: flex;
+     gap: 200px;
+     opacity: 0%;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+     
+   }
+
+  .list-competences h6{
+    color: white;
+    opacity: 0%;
+    animation: mymove 2s forwards;
+    animation-delay: 6s;
+    font-size: 10px;
+    font-family: 'Source Code Pro', monospace;
+  }
+
+   .box {
+     position: relative;
+     display: flex;
+     top: 100px;
+     opacity: 0%;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+     margin-left: 200px;
+   }
+
+   .box h1 {
+     color: white;
+     font-weight: 500;
+     margin-right: 600px;
+     font-size: 48px;
+     font-family: 'Source Code Pro', monospace;
+   }
+
+   .socials  {
+     text-align: right;
+   }
+
+   .socials nav ul {
+     display: flex;
+     opacity: 0%;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+     margin-left: 1050px;
+     gap: 40px;
+   }
+
+  
+   footer {
+     background: #000000;
+     grid-column-start: 1;
+     grid-column-end: 3;
+     text-align: center;
+     
+   }
+
+   footer p{
+     margin-top: 20px;
+     font-size: 12px;
+     opacity: 0%;
+     animation: mymove 2s forwards;
+     animation-delay: 6s;
+   }
+   
